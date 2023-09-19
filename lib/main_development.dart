@@ -1,11 +1,15 @@
+import 'package:apprecetas/Recetas/view/Vista.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_mvc/Recetas/controller/recetaController.dart';
-import 'package:flutter_mvc/Recetas/view/Vista.dart';
+import 'package:apprecetas/Recetas/controller/recetaController.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+//runApp(MyApp());
+ var controller = recetaController();
+ controller.fetchRecipeFromAPI();
+
+
 }
 
 class MyApp extends StatelessWidget {

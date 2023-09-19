@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_mvc/Recetas/controller/recetaController.dart';
-import 'package:flutter_mvc/Recetas/model/Recetamodelo.dart';
+import 'package:apprecetas/Recetas/controller/recetaController.dart';
+import 'package:apprecetas/Recetas/model/Recetamodelo.dart';
 
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
@@ -14,29 +14,22 @@ class RecipeListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext contexto) {
     final controladoreceta = Provider.of<recetaController>(contexto);
-    final recetas = recetaController._receta;
+    final recetas = recetaController();
 
     return Scaffold(
       appBar: AppBar(
         title: Text('Recetas'),
       ),
-      body: recetaController.isLoading
+      body: recetas.isLoading()
           ? Center(child: CircularProgressIndicator())
           : ListView.builder(
-              itemCount: recetas.length,
+              //itemCount: recetas.length,
               itemBuilder: (contexto, index) {
-                final receta = recetas[index];
+             //   final receta = recetas[index];
                 return ListTile(
-                  title: Text(receta.instrucciones),
-                  subtitle: Text(receta.prepTime),
-                  onTap: () {
-                    Navigator.push(
-                      contexto,
-                      MaterialPageRoute(
-                        builder: (contexto) => DetallesReceta(receta: receta),
-                      ),
-                    );
-                  },
+               //   title: Text(receta.instrucciones),
+               //   subtitle: Text(receta.prepTime),
+                
                 );
               },
             ),

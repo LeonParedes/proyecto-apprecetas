@@ -11,8 +11,8 @@ import 'package:http/http.dart' as http;
 
 
 class recetaController extends ChangeNotifier {
-  Map<Receta> receta= [];
-
+  List<Receta> receta= [];
+  get isLoading => null; 
  
   Future<void> fetchRecipeFromAPI() async {
     try {
@@ -21,27 +21,28 @@ class recetaController extends ChangeNotifier {
 
       if (response.statusCode == 200) {
         final data = json.decode(response.body);
-        final results = data['results'];
+        print(data);
+        // final results = data['results'];
 
-         unareceta = results.Map<Receta>((result) {
-          final instrucciones = result['instructions'];
-          final prepTime = result['prepTime'];
-          final calorias = result['calories'];
-          final ingredientes = result['ingredients'];
-          final costoingrediente = result['costOfIngredient'];
-          final costoTotal = result['costTotal'];
+        //  receta = results.Map<Receta>((result) {
+        //   final instrucciones = result['instructions'];
+        //   final prepTime = result['prepTime'];
+        //   final calorias = result['calories'];
+        //   final ingredientes = result['ingredients'];
+        //   final costoingrediente = result['costOfIngredient'];
+        //   final costoTotal = result['costTotal'];
 
-          return Receta(
-            instrucciones: instrucciones,
-            prepTime: prepTime,
-            calorias: calorias,
-            ingredientes: ingredientes.cast<String>(),
-            costoingrediente: costoingrediente.cast<double>(),
-            costoTotal: costoTotal.toDouble(),
-          );
-        }).toList();
+        //   return Receta(
+        //     instrucciones: instrucciones,
+        //     prepTime: prepTime,
+        //     calorias: calorias,
+        //     ingredientes: ingredientes.cast<String>(),
+        //     costoingrediente: costoingrediente.cast<double>(),
+        //     costoTotal: costoTotal.toDouble(),
+        //   );
+        // }).toList();
 
-        notifyListeners();
+        // notifyListeners();
       } else {
         throw Exception('Failed to fetch recipes');
       }
@@ -49,4 +50,6 @@ class recetaController extends ChangeNotifier {
       throw Exception('Failed to fetch recipes: $error');
     }
   }
+
+ 
 }
