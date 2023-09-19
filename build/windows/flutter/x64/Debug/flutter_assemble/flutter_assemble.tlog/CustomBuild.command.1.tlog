@@ -1,0 +1,28 @@
+^C:\USERS\LEONA\DOCUMENTS\GITHUB\FLUTTER_MVC_EXAMPLE\BUILD\WINDOWS\CMAKEFILES\4032ED3C39C065A8E1051C3B7B7D3054\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\Leona\Documents\flutter PROJECT_DIR=C:\Users\Leona\Documents\GitHub\flutter_mvc_example FLUTTER_ROOT=C:\Users\Leona\Documents\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\Leona\Documents\GitHub\flutter_mvc_example\windows\flutter\ephemeral PROJECT_DIR=C:\Users\Leona\Documents\GitHub\flutter_mvc_example FLUTTER_TARGET=C:\Users\Leona\Documents\GitHub\flutter_mvc_example\lib\main_development.dart DART_DEFINES=Zmx1dHRlci5pbnNwZWN0b3Iuc3RydWN0dXJlZEVycm9ycz1mYWxzZQ==,RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC9iOGQzNTgxMGU5MWFiOGZjMzliYTVlN2E0MWJmZjZmNjk3ZThlM2E4Lw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\Leona\Documents\GitHub\flutter_mvc_example\.dart_tool\package_config.json C:/Users/Leona/Documents/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LEONA\DOCUMENTS\GITHUB\FLUTTER_MVC_EXAMPLE\BUILD\WINDOWS\CMAKEFILES\508F153829662908289851DFED487F2B\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\LEONA\DOCUMENTS\GITHUB\FLUTTER_MVC_EXAMPLE\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/Leona/Documents/GitHub/flutter_mvc_example/windows -BC:/Users/Leona/Documents/GitHub/flutter_mvc_example/build/windows --check-stamp-file C:/Users/Leona/Documents/GitHub/flutter_mvc_example/build/windows/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
