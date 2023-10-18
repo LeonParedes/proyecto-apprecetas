@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-18T14:42:32.193Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="7J7FAu5VVbg3Bjeh1PPe" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-18T14:55:47.450Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="VoNRTQuh-EANfTgI0_dq" version="22.0.4" type="github">
   <diagram name="Página-1" id="2KmhBw5R_nQqM3TZG5DZ">
-    <mxGraphModel dx="3967" dy="2110" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2917" dy="1933" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -294,7 +294,7 @@
         <mxCell id="Q7mzp_MgaR6MMWMUA-nT-115" value="Pantalla principal" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=#333333;spacing=3.8;strokeOpacity=0;fillOpacity=0;fillColor=#000000;strokeWidth=1.5;lucidId=KJYEfyRNzbKJ;" parent="1" vertex="1">
           <mxGeometry x="-1359" y="-633" width="240" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="Q7mzp_MgaR6MMWMUA-nT-116" value="Página principal de recetas" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=#333333;spacing=3.8;strokeOpacity=0;fillOpacity=0;fillColor=#ffffff;strokeWidth=1.5;lucidId=KJYEpGTaNed2;" parent="1" vertex="1">
+        <mxCell id="Q7mzp_MgaR6MMWMUA-nT-116" value="Home" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=#333333;spacing=3.8;strokeOpacity=0;fillOpacity=0;fillColor=#ffffff;strokeWidth=1.5;lucidId=KJYEpGTaNed2;" parent="1" vertex="1">
           <mxGeometry x="-986" y="-633" width="240" height="45" as="geometry" />
         </mxCell>
         <mxCell id="Q7mzp_MgaR6MMWMUA-nT-117" value="Página de instrucciones de receta" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=#333333;spacing=3.8;strokeOpacity=0;fillOpacity=0;fillColor=#ffffff;strokeWidth=1.5;lucidId=KJYEIMyOqWNt;" parent="1" vertex="1">
