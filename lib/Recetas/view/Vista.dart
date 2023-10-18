@@ -53,30 +53,8 @@ class DetallesReceta extends StatelessWidget {
           Text('Instructions: ${receta.instrucciones}'),
           Text('Prep Time: ${receta.prepTime}'),
           Text('Calories: ${receta.calorias}'),
-          Text('Ingredientes:'),
-          ListView.builder(
-            shrinkWrap: true,
-            itemCount: receta.ingredientes.length,
-            itemBuilder: (contexto, index) {
-              final ingrediente = receta.ingredientes[index];
-              final costoingrediente = receta.costoingrediente[index];
-              final formattedCost = NumberFormat.currency(
-                locale: Localizations.localeOf(contexto).toString(),
-                symbol: '\$',
-              ).format(costoingrediente);
-
-              return ListTile(
-                title: Text(ingrediente),
-                subtitle: Text('Cost: $formattedCost'),
-              );
-            },
-          ),
-          Text('Total Cost: ${NumberFormat.currency(
-            locale: Localizations.localeOf(contexto).toString(),
-            symbol: '\$',
-          ).format(receta.costoTotal)}'),
-        ],
-      ),
+          Text('Ingredientes:')
+      );
     );
   }
 }

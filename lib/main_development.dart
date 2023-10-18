@@ -5,7 +5,7 @@ import 'package:apprecetas/Recetas/controller/recetaController.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-//runApp(MyApp());
+runApp(MyApp());
  var controller = recetaController();
  controller.fetchRecipeFromAPI();
 

@@ -1,0 +1,4 @@
+#Thu Oct 12 13:18:05 PDT 2023
+base.0=C\:\\Users\\Leona\\Documents\\GitHub\\proyectomvc\\apprecetas\\build\\app\\intermediates\\dex\\stagingDebug\\mergeDexStagingDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
