@@ -1,4 +1,0 @@
-#Thu Oct 12 13:17:56 PDT 2023
-base.0=C\:\\Users\\Leona\\Documents\\GitHub\\proyectomvc\\apprecetas\\build\\app\\intermediates\\dex\\productionDebug\\mergeDexProductionDebug\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
