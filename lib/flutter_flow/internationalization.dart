@@ -107,6 +107,10 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Busca
   {
+    'gjs3dz76': {
+      'es': 'ReceBuddy',
+      'en': '',
+    },
     'kusz26v1': {
       'es': 'Buscar',
       'en': '',
@@ -136,44 +140,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'i9cgboso': {
-      'es': 'Ingresa el nombre o ID',
+      'es': 'Ingresa el nombre',
       'en': '',
     },
     '5mfkfg78': {
       'es': 'Listado de resultados:  ',
       'en': '',
     },
-    'su5ql03o': {
-      'es': 'Takoyaki',
-      'en': '',
-    },
-    'zotwk2fe': {
-      'es': '• Takoyaki callejero',
-      'en': '',
-    },
-    'h2r1at5h': {
-      'es': ' -  Estilo japones.\n',
-      'en': '',
-    },
-    'qvhu3hug': {
-      'es': '\n• Takoyaki ',
-      'en': '',
-    },
-    'owj1yuzs': {
-      'es': ' -  Estilo cachanilla.',
-      'en': '',
-    },
-    'htz5q8ls': {
-      'es': 'Tiempo de preparacion:  25 minutos',
-      'en': '',
-    },
-    'w52rm6kt': {
-      'es': 'Una recomendacion para la \n preparacion:',
-      'en': '',
-    },
-    '1qvsy6c4': {
-      'es':
-          'Nunc vitae ornare mauris. \nEtiam aliquet, elit sit amet \nsodales gravida, \nligula lectus consequat \npurus, iaculis sagittis \neros mi consectetur.',
+    '301ctyn6': {
+      'es': '\n',
       'en': '',
     },
     'efr3g5h4': {
@@ -182,10 +157,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'a0m8i84q': {
       'es': 'Nutrientes',
-      'en': '',
-    },
-    'gjs3dz76': {
-      'es': 'ReceBuddy',
       'en': '',
     },
     'niurwky8': {
@@ -212,72 +183,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'vmf5tfv7': {
-      'es': 'Home',
-      'en': '',
-    },
-  },
-  // Receta
-  {
-    'lr6kvm9a': {
-      'es': 'Receta para: ',
-      'en': '',
-    },
-    '08tjdy4a': {
-      'es': 'Takoyaki Japones',
-      'en': '',
-    },
-    '9qc9h4kw': {
-      'es': 'Tiempo de preparacion:  25 minutos',
-      'en': '',
-    },
-    'jrv0urxm': {
-      'es':
-          'Lo primero que tendrás que hacer es preparar los ingredientes sólidos de la receta: \n   Se corta el pulpo en pequeños trocitos (que puedan caber dentro de tus bolas de Takoyaki); se pica el repollo en trozos muy pequeños, la cebolla y el benishōga.\n\n',
-      'en': '',
-    },
-    'ha3nehra': {
-      'es':
-          'Para el siguiente paso necesitarás un cuenco grande, en donde se añadirá la harina, los huevos y el agua.    \n   Se mezclan bien hasta que se obtenga una mezcla homogénea y cremosa, no tiene que quedar muy liquida (si ha quedado muy liquida puedes agregar un poco más de harina hasta que quede más cremosa).\n\n',
-      'en': '',
-    },
-    'yvc1p3vq': {
-      'es':
-          'A la mezcla se le añade benishōga troceado, la cebolla y el repollo. \n    Sigue mezclando muy bien hasta que los ingredientes se encuentren bien distribuidos por toda la mezcla.\n\n',
-      'en': '',
-    },
-    'b7t67hp0': {
-      'es':
-          'Ahora debes comenzar a calentar la plancha Takoyaki e ir añadiendo aceite de oliva o de girasol en cada uno de los huecos en los que colocaras un Takoyaki, para evitar que las bolitas queden pegadas y se rompan al despegarlas. \n',
-      'en': '',
-    },
-    'crp7u5sz': {
-      'es':
-          'Cuando esté bien caliente se añade la mezcla a cada uno de los huecos y se pone un trocito de pulpo encima de ellas. Si queda un poco más de espacio, es recomendable echar más mezcla por encima.\n',
-      'en': '',
-    },
-    'ed8ihwp0': {
-      'es':
-          'Después de unos minutos se verá que ese lado del buñuelo ha quedado listo, así que usando un pincho y con mucho cuidado tendremos que girar los Takoyaki. El movimiento tiene que ser suave y rápido. La idea es conseguir una bolita de pulpo dorada y perfecta. Es posible que al primer intento dañes un poco las bolitas, así que procura hacerlo con mucho cuidado y delicadeza.\n',
-      'en': '',
-    },
-    'u8xqlmcy': {
-      'es':
-          'Cuando estén listos por ambos lados, las bolitas se colocan en un plato y se les echa encima mayonesa, Katsuoboshi, salsa Takoyaki (Tonkatsu) y Aonori. Les puedes echar a tu gusto y de una forma que el plato se vea bonito. Deja que tu creatividad aparezca y adorna el plato como mejor te parezca, pero lo más importante es que disfrutes el gran sabor de este plato típico de la cocina japonesa. ',
-      'en': '',
-    },
-    'zmm71jlf': {
-      'es': 'Receta',
-      'en': '',
-    },
-    '9c92sur3': {
-      'es': 'Nutrientes',
-      'en': '',
-    },
-    'o491e0fx': {
-      'es': 'ReceBuddy',
-      'en': '',
-    },
-    'ghipbqx9': {
       'es': 'Home',
       'en': '',
     },
@@ -548,13 +453,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // ejemplo
+  // RecetaApi
   {
-    'c465wpm2': {
-      'es': 'Page Title',
+    '42ons8ku': {
+      'es': 'Receta para: ',
       'en': '',
     },
-    '7hfdmxux': {
+    'g6xlpp1t': {
+      'es': 'Tiempo de preparacion:',
+      'en': '',
+    },
+    'wpiiewe7': {
+      'es': 'Receta',
+      'en': '',
+    },
+    '0deeb6s5': {
+      'es': 'Nutrientes',
+      'en': '',
+    },
+    'cybkbtsc': {
+      'es': 'ReceBuddy',
+      'en': '',
+    },
+    '0dcci493': {
       'es': 'Home',
       'en': '',
     },

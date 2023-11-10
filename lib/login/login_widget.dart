@@ -6,6 +6,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 import 'login_model.dart';
 export 'login_model.dart';
 
@@ -46,6 +47,8 @@ class _LoginWidgetState extends State<LoginWidget>
 
     _model.passwordConfirmController ??= TextEditingController();
     _model.passwordConfirmFocusNode ??= FocusNode();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -65,6 +68,8 @@ class _LoginWidgetState extends State<LoginWidget>
         ),
       );
     }
+
+    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
@@ -443,7 +448,10 @@ class _LoginWidgetState extends State<LoginWidget>
                                                   .fromSTEB(
                                                       0.0, 24.0, 0.0, 0.0),
                                               child: FFButtonWidget(
-                                                onPressed: () async {},
+                                                onPressed: () {
+                                                  print(
+                                                      'Button-Login pressed ...');
+                                                },
                                                 text:
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -1073,7 +1081,9 @@ class _LoginWidgetState extends State<LoginWidget>
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 24.0, 0.0, 0.0),
                                             child: FFButtonWidget(
-                                              onPressed: () async {},
+                                              onPressed: () {
+                                                print('Button pressed ...');
+                                              },
                                               text: FFLocalizations.of(context)
                                                   .getText(
                                                 'x72tkds6' /* Create Account */,

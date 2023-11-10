@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'ejemplo_widget.dart' show EjemploWidget;
+import 'receta_api_widget.dart' show RecetaApiWidget;
 import 'package:flutter/material.dart';
 
-class EjemploModel extends FlutterFlowModel<EjemploWidget> {
+class RecetaApiModel extends FlutterFlowModel<RecetaApiWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

@@ -7,6 +7,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:provider/provider.dart';
 import 'home_model.dart';
 export 'home_model.dart';
 
@@ -88,6 +89,8 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
   void initState() {
     super.initState();
     _model = createModel(context, () => HomeModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -107,6 +110,8 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
         ),
       );
     }
+
+    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
@@ -631,9 +636,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                                       alignment:
                                           const AlignmentDirectional(0.00, 0.00),
                                       child: FFButtonWidget(
-                                        onPressed: () async {
-                                          context.pushNamed('Receta');
-                                        },
+                                        onPressed: () async {},
                                         text:
                                             FFLocalizations.of(context).getText(
                                           'bfd9v8uq' /* Receta */,

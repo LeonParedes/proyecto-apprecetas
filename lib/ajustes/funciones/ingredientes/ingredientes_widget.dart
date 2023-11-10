@@ -7,6 +7,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'ingredientes_model.dart';
 export 'ingredientes_model.dart';
 
@@ -26,6 +27,8 @@ class _IngredientesWidgetState extends State<IngredientesWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => IngredientesModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -45,6 +48,8 @@ class _IngredientesWidgetState extends State<IngredientesWidget> {
         ),
       );
     }
+
+    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
@@ -401,9 +406,7 @@ Eti... */
                                       alignment:
                                           const AlignmentDirectional(0.00, 0.00),
                                       child: FFButtonWidget(
-                                        onPressed: () async {
-                                          context.pushNamed('Receta');
-                                        },
+                                        onPressed: () async {},
                                         text:
                                             FFLocalizations.of(context).getText(
                                           'uxknik56' /* Receta */,

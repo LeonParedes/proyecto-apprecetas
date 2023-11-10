@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'busca_widget.dart' show BuscaWidget;
@@ -10,10 +11,12 @@ class BuscaModel extends FlutterFlowModel<BuscaWidget> {
   // State field(s) for DropDown widget.
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  // State field(s) for textsearch widget.
+  FocusNode? textsearchFocusNode;
+  TextEditingController? textsearchController;
+  String? Function(BuildContext, String?)? textsearchControllerValidator;
+  // Stores action output result for [Backend Call - API (getrecetafull)] action in IconButton widget.
+  ApiCallResponse? resultadoreceta;
 
   /// Initialization and disposal methods.
 
@@ -23,8 +26,8 @@ class BuscaModel extends FlutterFlowModel<BuscaWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    textsearchFocusNode?.dispose();
+    textsearchController?.dispose();
   }
 
   /// Action blocks are added here.

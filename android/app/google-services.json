@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "956875644218",
+    "project_id": "apprecetas-1ppm9d",
+    "storage_bucket": "apprecetas-1ppm9d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956875644218:android:2f03dfc55d19a2e655c403",
+        "android_client_info": {
+          "package_name": "com.desarrollomovil.recebuddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWimoq-cd1FNyB0aX6sG7vqBNn-EKoiUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

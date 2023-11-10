@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'nutrientes_model.dart';
 export 'nutrientes_model.dart';
 
@@ -24,6 +25,8 @@ class _NutrientesWidgetState extends State<NutrientesWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => NutrientesModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -43,6 +46,8 @@ class _NutrientesWidgetState extends State<NutrientesWidget> {
         ),
       );
     }
+
+    context.watch<FFAppState>();
 
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
@@ -605,9 +610,7 @@ Porcentaje necesario diario: */
                                       alignment:
                                           const AlignmentDirectional(0.00, 0.00),
                                       child: FFButtonWidget(
-                                        onPressed: () async {
-                                          context.pushNamed('Receta');
-                                        },
+                                        onPressed: () async {},
                                         text:
                                             FFLocalizations.of(context).getText(
                                           'lz8iduae' /* Receta */,

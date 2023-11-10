@@ -11,24 +11,16 @@ import '/flutter_flow/flutter_flow_util.dart';
 class RecetaStruct extends FFFirebaseStruct {
   RecetaStruct({
     String? nombre,
-    int? id,
-    String? foto,
-    String? moto,
-    List<RecetaStruct>? instrucciones,
-    List<String>? nutrientes,
-    DateTime? fechaconsulta,
-    bool? reciente,
-    List<RecetaStruct>? parametros,
+    List<String>? instructions,
+    String? imagen,
+    List<String>? ingredientes,
+    String? timerequired,
     FirestoreUtilData firestoreUtilData = const FirestoreUtilData(),
   })  : _nombre = nombre,
-        _id = id,
-        _foto = foto,
-        _moto = moto,
-        _instrucciones = instrucciones,
-        _nutrientes = nutrientes,
-        _fechaconsulta = fechaconsulta,
-        _reciente = reciente,
-        _parametros = parametros,
+        _instructions = instructions,
+        _imagen = imagen,
+        _ingredientes = ingredientes,
+        _timerequired = timerequired,
         super(firestoreUtilData);
 
   // "Nombre" field.
@@ -37,77 +29,40 @@ class RecetaStruct extends FFFirebaseStruct {
   set nombre(String? val) => _nombre = val;
   bool hasNombre() => _nombre != null;
 
-  // "ID" field.
-  int? _id;
-  int get id => _id ?? 0;
-  set id(int? val) => _id = val;
-  void incrementId(int amount) => _id = id + amount;
-  bool hasId() => _id != null;
+  // "instructions" field.
+  List<String>? _instructions;
+  List<String> get instructions => _instructions ?? const [];
+  set instructions(List<String>? val) => _instructions = val;
+  void updateInstructions(Function(List<String>) updateFn) =>
+      updateFn(_instructions ??= []);
+  bool hasInstructions() => _instructions != null;
 
-  // "Foto" field.
-  String? _foto;
-  String get foto => _foto ?? '';
-  set foto(String? val) => _foto = val;
-  bool hasFoto() => _foto != null;
+  // "imagen" field.
+  String? _imagen;
+  String get imagen => _imagen ?? '';
+  set imagen(String? val) => _imagen = val;
+  bool hasImagen() => _imagen != null;
 
-  // "moto" field.
-  String? _moto;
-  String get moto => _moto ?? '';
-  set moto(String? val) => _moto = val;
-  bool hasMoto() => _moto != null;
+  // "ingredientes" field.
+  List<String>? _ingredientes;
+  List<String> get ingredientes => _ingredientes ?? const [];
+  set ingredientes(List<String>? val) => _ingredientes = val;
+  void updateIngredientes(Function(List<String>) updateFn) =>
+      updateFn(_ingredientes ??= []);
+  bool hasIngredientes() => _ingredientes != null;
 
-  // "Instrucciones" field.
-  List<RecetaStruct>? _instrucciones;
-  List<RecetaStruct> get instrucciones => _instrucciones ?? const [];
-  set instrucciones(List<RecetaStruct>? val) => _instrucciones = val;
-  void updateInstrucciones(Function(List<RecetaStruct>) updateFn) =>
-      updateFn(_instrucciones ??= []);
-  bool hasInstrucciones() => _instrucciones != null;
-
-  // "Nutrientes" field.
-  List<String>? _nutrientes;
-  List<String> get nutrientes => _nutrientes ?? const [];
-  set nutrientes(List<String>? val) => _nutrientes = val;
-  void updateNutrientes(Function(List<String>) updateFn) =>
-      updateFn(_nutrientes ??= []);
-  bool hasNutrientes() => _nutrientes != null;
-
-  // "fechaconsulta" field.
-  DateTime? _fechaconsulta;
-  DateTime? get fechaconsulta => _fechaconsulta;
-  set fechaconsulta(DateTime? val) => _fechaconsulta = val;
-  bool hasFechaconsulta() => _fechaconsulta != null;
-
-  // "reciente" field.
-  bool? _reciente;
-  bool get reciente => _reciente ?? false;
-  set reciente(bool? val) => _reciente = val;
-  bool hasReciente() => _reciente != null;
-
-  // "parametros" field.
-  List<RecetaStruct>? _parametros;
-  List<RecetaStruct> get parametros => _parametros ?? const [];
-  set parametros(List<RecetaStruct>? val) => _parametros = val;
-  void updateParametros(Function(List<RecetaStruct>) updateFn) =>
-      updateFn(_parametros ??= []);
-  bool hasParametros() => _parametros != null;
+  // "timerequired" field.
+  String? _timerequired;
+  String get timerequired => _timerequired ?? '';
+  set timerequired(String? val) => _timerequired = val;
+  bool hasTimerequired() => _timerequired != null;
 
   static RecetaStruct fromMap(Map<String, dynamic> data) => RecetaStruct(
         nombre: data['Nombre'] as String?,
-        id: castToType<int>(data['ID']),
-        foto: data['Foto'] as String?,
-        moto: data['moto'] as String?,
-        instrucciones: getStructList(
-          data['Instrucciones'],
-          RecetaStruct.fromMap,
-        ),
-        nutrientes: getDataList(data['Nutrientes']),
-        fechaconsulta: data['fechaconsulta'] as DateTime?,
-        reciente: data['reciente'] as bool?,
-        parametros: getStructList(
-          data['parametros'],
-          RecetaStruct.fromMap,
-        ),
+        instructions: getDataList(data['instructions']),
+        imagen: data['imagen'] as String?,
+        ingredientes: getDataList(data['ingredientes']),
+        timerequired: data['timerequired'] as String?,
       );
 
   static RecetaStruct? maybeFromMap(dynamic data) =>
@@ -115,14 +70,10 @@ class RecetaStruct extends FFFirebaseStruct {
 
   Map<String, dynamic> toMap() => {
         'Nombre': _nombre,
-        'ID': _id,
-        'Foto': _foto,
-        'moto': _moto,
-        'Instrucciones': _instrucciones?.map((e) => e.toMap()).toList(),
-        'Nutrientes': _nutrientes,
-        'fechaconsulta': _fechaconsulta,
-        'reciente': _reciente,
-        'parametros': _parametros?.map((e) => e.toMap()).toList(),
+        'instructions': _instructions,
+        'imagen': _imagen,
+        'ingredientes': _ingredientes,
+        'timerequired': _timerequired,
       }.withoutNulls;
 
   @override
@@ -131,40 +82,23 @@ class RecetaStruct extends FFFirebaseStruct {
           _nombre,
           ParamType.String,
         ),
-        'ID': serializeParam(
-          _id,
-          ParamType.int,
-        ),
-        'Foto': serializeParam(
-          _foto,
-          ParamType.String,
-        ),
-        'moto': serializeParam(
-          _moto,
-          ParamType.String,
-        ),
-        'Instrucciones': serializeParam(
-          _instrucciones,
-          ParamType.DataStruct,
-          true,
-        ),
-        'Nutrientes': serializeParam(
-          _nutrientes,
+        'instructions': serializeParam(
+          _instructions,
           ParamType.String,
           true,
         ),
-        'fechaconsulta': serializeParam(
-          _fechaconsulta,
-          ParamType.DateTime,
+        'imagen': serializeParam(
+          _imagen,
+          ParamType.String,
         ),
-        'reciente': serializeParam(
-          _reciente,
-          ParamType.bool,
-        ),
-        'parametros': serializeParam(
-          _parametros,
-          ParamType.DataStruct,
+        'ingredientes': serializeParam(
+          _ingredientes,
+          ParamType.String,
           true,
+        ),
+        'timerequired': serializeParam(
+          _timerequired,
+          ParamType.String,
         ),
       }.withoutNulls;
 
@@ -175,47 +109,25 @@ class RecetaStruct extends FFFirebaseStruct {
           ParamType.String,
           false,
         ),
-        id: deserializeParam(
-          data['ID'],
-          ParamType.int,
-          false,
-        ),
-        foto: deserializeParam(
-          data['Foto'],
-          ParamType.String,
-          false,
-        ),
-        moto: deserializeParam(
-          data['moto'],
-          ParamType.String,
-          false,
-        ),
-        instrucciones: deserializeStructParam<RecetaStruct>(
-          data['Instrucciones'],
-          ParamType.DataStruct,
-          true,
-          structBuilder: RecetaStruct.fromSerializableMap,
-        ),
-        nutrientes: deserializeParam<String>(
-          data['Nutrientes'],
+        instructions: deserializeParam<String>(
+          data['instructions'],
           ParamType.String,
           true,
         ),
-        fechaconsulta: deserializeParam(
-          data['fechaconsulta'],
-          ParamType.DateTime,
+        imagen: deserializeParam(
+          data['imagen'],
+          ParamType.String,
           false,
         ),
-        reciente: deserializeParam(
-          data['reciente'],
-          ParamType.bool,
-          false,
-        ),
-        parametros: deserializeStructParam<RecetaStruct>(
-          data['parametros'],
-          ParamType.DataStruct,
+        ingredientes: deserializeParam<String>(
+          data['ingredientes'],
+          ParamType.String,
           true,
-          structBuilder: RecetaStruct.fromSerializableMap,
+        ),
+        timerequired: deserializeParam(
+          data['timerequired'],
+          ParamType.String,
+          false,
         ),
       );
 
@@ -227,37 +139,21 @@ class RecetaStruct extends FFFirebaseStruct {
     const listEquality = ListEquality();
     return other is RecetaStruct &&
         nombre == other.nombre &&
-        id == other.id &&
-        foto == other.foto &&
-        moto == other.moto &&
-        listEquality.equals(instrucciones, other.instrucciones) &&
-        listEquality.equals(nutrientes, other.nutrientes) &&
-        fechaconsulta == other.fechaconsulta &&
-        reciente == other.reciente &&
-        listEquality.equals(parametros, other.parametros);
+        listEquality.equals(instructions, other.instructions) &&
+        imagen == other.imagen &&
+        listEquality.equals(ingredientes, other.ingredientes) &&
+        timerequired == other.timerequired;
   }
 
   @override
-  int get hashCode => const ListEquality().hash([
-        nombre,
-        id,
-        foto,
-        moto,
-        instrucciones,
-        nutrientes,
-        fechaconsulta,
-        reciente,
-        parametros
-      ]);
+  int get hashCode => const ListEquality()
+      .hash([nombre, instructions, imagen, ingredientes, timerequired]);
 }
 
 RecetaStruct createRecetaStruct({
   String? nombre,
-  int? id,
-  String? foto,
-  String? moto,
-  DateTime? fechaconsulta,
-  bool? reciente,
+  String? imagen,
+  String? timerequired,
   Map<String, dynamic> fieldValues = const {},
   bool clearUnsetFields = true,
   bool create = false,
@@ -265,11 +161,8 @@ RecetaStruct createRecetaStruct({
 }) =>
     RecetaStruct(
       nombre: nombre,
-      id: id,
-      foto: foto,
-      moto: moto,
-      fechaconsulta: fechaconsulta,
-      reciente: reciente,
+      imagen: imagen,
+      timerequired: timerequired,
       firestoreUtilData: FirestoreUtilData(
         clearUnsetFields: clearUnsetFields,
         create: create,

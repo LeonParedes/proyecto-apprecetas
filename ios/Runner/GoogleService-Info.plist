@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDqHSzvcYxVpoAtnv6q1EptGDMYGRu9xZs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>956875644218</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.desarrollomovil.recebuddy</string>
+	<key>PROJECT_ID</key>
+	<string>apprecetas-1ppm9d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>apprecetas-1ppm9d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:956875644218:ios:a37a96837c645e9955c403</string>
+</dict>
+</plist>

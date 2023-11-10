@@ -2,7 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import 'schema/util/firestore_util.dart';
 
-import 'schema/usuarios_record.dart';
+import 'schema/users_record.dart';
+import 'schema/buscarrecetas_record.dart';
+import 'schema/recetasingredientespasos_record.dart';
 
 export 'dart:async' show StreamSubscription;
 export 'package:cloud_firestore/cloud_firestore.dart';
@@ -10,44 +12,122 @@ export 'schema/index.dart';
 export 'schema/util/firestore_util.dart';
 export 'schema/util/schema_util.dart';
 
-export 'schema/usuarios_record.dart';
+export 'schema/users_record.dart';
+export 'schema/buscarrecetas_record.dart';
+export 'schema/recetasingredientespasos_record.dart';
 
-/// Functions to query UsuariosRecords (as a Stream and as a Future).
-Future<int> queryUsuariosRecordCount({
+/// Functions to query UsersRecords (as a Stream and as a Future).
+Future<int> queryUsersRecordCount({
   Query Function(Query)? queryBuilder,
   int limit = -1,
 }) =>
     queryCollectionCount(
-      UsuariosRecord.collection,
+      UsersRecord.collection,
       queryBuilder: queryBuilder,
       limit: limit,
     );
 
-Stream<List<UsuariosRecord>> queryUsuariosRecord({
+Stream<List<UsersRecord>> queryUsersRecord({
   Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
     queryCollection(
-      UsuariosRecord.collection,
-      UsuariosRecord.fromSnapshot,
+      UsersRecord.collection,
+      UsersRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
     );
 
-Future<List<UsuariosRecord>> queryUsuariosRecordOnce({
+Future<List<UsersRecord>> queryUsersRecordOnce({
   Query Function(Query)? queryBuilder,
   int limit = -1,
   bool singleRecord = false,
 }) =>
     queryCollectionOnce(
-      UsuariosRecord.collection,
-      UsuariosRecord.fromSnapshot,
+      UsersRecord.collection,
+      UsersRecord.fromSnapshot,
       queryBuilder: queryBuilder,
       limit: limit,
       singleRecord: singleRecord,
     );
+
+/// Functions to query BuscarrecetasRecords (as a Stream and as a Future).
+Future<int> queryBuscarrecetasRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      BuscarrecetasRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<BuscarrecetasRecord>> queryBuscarrecetasRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      BuscarrecetasRecord.collection,
+      BuscarrecetasRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<BuscarrecetasRecord>> queryBuscarrecetasRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      BuscarrecetasRecord.collection,
+      BuscarrecetasRecord.fromSnapshot,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+/// Functions to query RecetasingredientespasosRecords (as a Stream and as a Future).
+Future<int> queryRecetasingredientespasosRecordCount({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+}) =>
+    queryCollectionCount(
+      RecetasingredientespasosRecord.collection,
+      queryBuilder: queryBuilder,
+      limit: limit,
+    );
+
+Stream<List<RecetasingredientespasosRecord>>
+    queryRecetasingredientespasosRecord({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+        queryCollection(
+          RecetasingredientespasosRecord.collection,
+          RecetasingredientespasosRecord.fromSnapshot,
+          queryBuilder: queryBuilder,
+          limit: limit,
+          singleRecord: singleRecord,
+        );
+
+Future<List<RecetasingredientespasosRecord>>
+    queryRecetasingredientespasosRecordOnce({
+  Query Function(Query)? queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+        queryCollectionOnce(
+          RecetasingredientespasosRecord.collection,
+          RecetasingredientespasosRecord.fromSnapshot,
+          queryBuilder: queryBuilder,
+          limit: limit,
+          singleRecord: singleRecord,
+        );
 
 Future<int> queryCollectionCount(
   Query collection, {
