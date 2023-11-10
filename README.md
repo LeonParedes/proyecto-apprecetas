@@ -1,2 +1,7 @@
-Proyecto de la aplicacion ReceBuddy.
-Desarrollado en flutterflow con utilizacion de la API de Spoonacular para la peticion de datos.
+# ReceBuddy
+
+A new Flutter project.
+
+## Getting Started
+
+FlutterFlow projects are built to run on the Flutter _stable_ release.
