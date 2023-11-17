@@ -107,10 +107,6 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // Busca
   {
-    'gjs3dz76': {
-      'es': 'ReceBuddy',
-      'en': '',
-    },
     'kusz26v1': {
       'es': 'Buscar',
       'en': '',
@@ -121,14 +117,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'gbtbi6ix': {
       'es': 'Receta por nombre',
-      'en': '',
-    },
-    'zbhw34w6': {
-      'es': 'Receta por ID',
-      'en': '',
-    },
-    '29yrhg63': {
-      'es': 'Ver recientes',
       'en': '',
     },
     'pqi5fvcj': {
@@ -147,16 +135,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Listado de resultados:  ',
       'en': '',
     },
-    '301ctyn6': {
-      'es': '\n',
+    'r6pwl739': {
+      'es': '    \n',
+      'en': '',
+    },
+    'ppqekth2': {
+      'es': '         ',
+      'en': '',
+    },
+    'a0m8i84q': {
+      'es': 'Nutrientes',
       'en': '',
     },
     'efr3g5h4': {
       'es': 'Receta',
       'en': '',
     },
-    'a0m8i84q': {
-      'es': 'Nutrientes',
+    'j118adsz': {
+      'es': 'ReceBuddy',
       'en': '',
     },
     'niurwky8': {
@@ -201,69 +197,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Tus recetas sugeridas para hoy:',
       'en': '',
     },
-    '2k9chaw7': {
-      'es': 'Nombre de receta',
-      'en': '',
-    },
     'hgzyr5v2': {
-      'es': 'Flavor text',
+      'es': 'Pick Me',
       'en': '',
     },
-    'm93iphy9': {
-      'es': 'Calorias',
+    'wu25g6n7': {
+      'es': 'Let\'s Go',
       'en': '',
     },
-    'k4u8uli9': {
-      'es': 'Nombre de receta',
+    'qkhz7tng': {
+      'es': 'Pick Me',
       'en': '',
     },
-    'we9fmhel': {
-      'es': 'Flavor text',
+    'zbswr8a2': {
+      'es': 'Let\'s Go',
       'en': '',
     },
-    '3vtxlb19': {
-      'es': 'Calorias',
+    '14nwe8l6': {
+      'es': 'Pick Me',
       'en': '',
     },
-    '30orr1zx': {
-      'es': 'Nombre de receta',
+    '2o6yaqaj': {
+      'es': 'Let\'s Go',
       'en': '',
     },
-    'cp2oi0wm': {
-      'es': 'Flavor text',
-      'en': '',
-    },
-    'qaosgwu3': {
-      'es': 'Calorias',
-      'en': '',
-    },
-    'n5n0zxab': {
-      'es': 'Nombre de receta',
-      'en': '',
-    },
-    's87d38cd': {
-      'es': 'Flavor text',
-      'en': '',
-    },
-    'cmp77mww': {
-      'es': 'Calorias',
-      'en': '',
-    },
-    'bfd9v8uq': {
-      'es': 'Receta',
-      'en': '',
-    },
-    '2yire2cu': {
-      'es': 'Buscar',
-      'en': '',
-    },
-    'b9r78dcn': {
+    'emh2o41e': {
       'es': 'ReceBuddy',
       'en': '',
     },
     'sgf2dus2': {
       'es': 'Home',
-      'en': '',
+      'en': 'home',
     },
   },
   // Ingredientes
@@ -298,14 +262,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Nunc vitae ornare mauris. \nEtiam aliquet, elit sit amet \nsodales gravida, \nligula lectus consequat \npurus, iaculis sagittis \neros mi consectetur.',
       'en': '',
     },
-    'uxknik56': {
-      'es': 'Receta',
-      'en': '',
-    },
-    '7p9aptib': {
-      'es': 'Nutrientes',
-      'en': '',
-    },
     'fwga93pc': {
       'es': 'ReceBuddy',
       'en': '',
@@ -321,135 +277,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Nutrientes en: ',
       'en': '',
     },
-    '74l8x7tn': {
-      'es': 'Takoyaki Japones',
-      'en': '',
-    },
     'bl320sua': {
       'es': 'Calorias:',
-      'en': '',
-    },
-    'y0csy0e3': {
-      'es': '\nPorcentaje necesario diario:',
       'en': '',
     },
     '8ldvrrzv': {
       'es': 'Grasas:',
       'en': '',
     },
-    'eembcrr1': {
-      'es': '\nPorcentaje necesario diario:',
-      'en': '',
-    },
-    'tgq973zz': {
-      'es': 'Grasas Saturadas:',
-      'en': '',
-    },
-    '5clc4296': {
-      'es': '\nPorcentaje necesario diario:',
-      'en': '',
-    },
     'kxvhhm7g': {
       'es': 'Carbohidratos:',
-      'en': '',
-    },
-    'h4ut94ce': {
-      'es': '\nPorcentaje necesario diario:',
-      'en': '',
-    },
-    'nhpjgefk': {
-      'es': 'Colesterol:',
-      'en': '',
-    },
-    '4lmb9x6h': {
-      'es': '\nPorcentaje necesario diario:',
-      'en': '',
-    },
-    'bdks7533': {
-      'es': 'Sodio:',
-      'en': '',
-    },
-    'iat9wz7n': {
-      'es': '\nPorcentaje necesario diario:',
       'en': '',
     },
     '9q46d8wh': {
       'es': 'Azucar:',
       'en': '',
     },
-    'wwfl0mor': {
-      'es': '\nPorcentaje necesario diario:',
-      'en': '',
-    },
     '920ad68y': {
       'es': 'Proteína:',
-      'en': '',
-    },
-    'tn0hmfdd': {
-      'es': '\nPorcentaje necesario diario:',
       'en': '',
     },
     'lz8iduae': {
       'es': 'Receta',
       'en': '',
     },
-    'frujlu8v': {
+    'x5w5b86p': {
       'es': 'ReceBuddy',
       'en': '',
     },
     'gawci2nv': {
       'es': 'Home',
-      'en': '',
-    },
-  },
-  // Login
-  {
-    'x2fwbgz9': {
-      'es': 'ReceBuddy',
-      'en': '',
-    },
-    '67vxenv2': {
-      'es': 'Sign In',
-      'en': '',
-    },
-    '5gpce7gv': {
-      'es': 'Correo electronico',
-      'en': '',
-    },
-    'pcqhd25h': {
-      'es': 'Password',
-      'en': '',
-    },
-    'cikvov7l': {
-      'es': 'Login',
-      'en': '',
-    },
-    '8qfwfk2q': {
-      'es': 'Forgot Password?',
-      'en': '',
-    },
-    'i58e9itv': {
-      'es': 'Or use a social account to login',
-      'en': '',
-    },
-    'ay0ldfvr': {
-      'es': 'Sign Up',
-      'en': '',
-    },
-    'y2a7m8d1': {
-      'es': 'Correo electronico',
-      'en': '',
-    },
-    'vaqb9ibu': {
-      'es': 'Password',
-      'en': '',
-    },
-    'b1f7l7mx': {
-      'es': 'Confirma tu Password',
-      'en': '',
-    },
-    'x72tkds6': {
-      'es': 'Create Account',
       'en': '',
     },
   },
@@ -463,20 +320,63 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Tiempo de preparacion:',
       'en': '',
     },
-    'wpiiewe7': {
-      'es': 'Receta',
-      'en': '',
-    },
     '0deeb6s5': {
       'es': 'Nutrientes',
       'en': '',
     },
-    'cybkbtsc': {
+    'wpiiewe7': {
+      'es': 'Receta',
+      'en': '',
+    },
+    '6iskogz9': {
       'es': 'ReceBuddy',
       'en': '',
     },
     '0dcci493': {
       'es': 'Home',
+      'en': '',
+    },
+  },
+  // Login
+  {
+    'tifswr86': {
+      'es': 'Sign In',
+      'en': '',
+    },
+    '9rxa1ewl': {
+      'es': 'Email Address',
+      'en': '',
+    },
+    'z1hselsn': {
+      'es': 'Password',
+      'en': '',
+    },
+    'lwo9ma2u': {
+      'es': 'Login',
+      'en': '',
+    },
+    '6ny6skir': {
+      'es': 'Sign Up',
+      'en': '',
+    },
+    'fqzmed6h': {
+      'es': 'Email Address',
+      'en': '',
+    },
+    'fetzs6ij': {
+      'es': 'Password',
+      'en': '',
+    },
+    '1v444yyx': {
+      'es': 'Confirm Password',
+      'en': '',
+    },
+    '6hph1uxl': {
+      'es': 'Create Account',
+      'en': '',
+    },
+    'w4ysuiex': {
+      'es': 'ReceBuddy',
       'en': '',
     },
   },

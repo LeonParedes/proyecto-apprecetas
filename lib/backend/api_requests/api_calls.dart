@@ -61,6 +61,39 @@ class GetrecetafullCall {
         response,
         r'''$.results[:].original_video_url''',
       );
+  dynamic carbohydratos(dynamic response) => getJsonField(
+        response,
+        r'''$.results[:].nutrition.carbohydrates''',
+      );
+  dynamic fibra(dynamic response) => getJsonField(
+        response,
+        r'''$.results[:].nutrition.fiber''',
+      );
+  dynamic actualizacion(dynamic response) => getJsonField(
+        response,
+        r'''$.results[:].nutrition.updated_at''',
+      );
+  dynamic proteina(dynamic response) => getJsonField(
+        response,
+        r'''$.results[:].nutrition.protein''',
+      );
+  dynamic grasas(dynamic response) => getJsonField(
+        response,
+        r'''$.results[:].nutrition.fat''',
+      );
+  dynamic calorias(dynamic response) => getJsonField(
+        response,
+        r'''$.results[:].nutrition.calories''',
+      );
+  dynamic azucar(dynamic response) => getJsonField(
+        response,
+        r'''$.results[:].nutrition.sugar''',
+      );
+  dynamic recepieName(dynamic response) => getJsonField(
+        response,
+        r'''$.results[:].compilations[:].name''',
+        true,
+      );
 }
 
 /// End tasty Group Code

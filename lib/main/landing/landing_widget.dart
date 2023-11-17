@@ -159,7 +159,7 @@ class _LandingWidgetState extends State<LandingWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -168,16 +168,16 @@ class _LandingWidgetState extends State<LandingWidget>
               child: Container(
                 width: double.infinity,
                 height: 500.0,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color(0xFF0FBD97),
-                      Color(0xFFF2D0A9),
-                      Color(0xFFE00029)
+                      FlutterFlowTheme.of(context).secondary,
+                      const Color(0xFFF2D0A9),
+                      const Color(0xFFFF002F)
                     ],
-                    stops: [0.0, 0.6, 0.8],
-                    begin: AlignmentDirectional(1.0, -0.87),
-                    end: AlignmentDirectional(-1.0, 0.87),
+                    stops: const [0.0, 0.6, 0.8],
+                    begin: const AlignmentDirectional(1.0, -0.87),
+                    end: const AlignmentDirectional(-1.0, 0.87),
                   ),
                 ),
                 child: Container(
@@ -250,34 +250,37 @@ class _LandingWidgetState extends State<LandingWidget>
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Expanded(
-                    child: Align(
-                      alignment: const AlignmentDirectional(0.00, 0.00),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 16.0),
-                        child: FFButtonWidget(
-                          onPressed: () async {
-                            context.pushNamed('Login');
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            '2moiew3o' /* Login - Sing Up */,
-                          ),
-                          options: FFButtonOptions(
-                            width: 230.0,
-                            height: 52.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            textStyle: FlutterFlowTheme.of(context).bodyLarge,
-                            elevation: 0.0,
-                            borderSide: BorderSide(
-                              color: FlutterFlowTheme.of(context).alternate,
-                              width: 2.0,
+                    child: Opacity(
+                      opacity: 0.0,
+                      child: Align(
+                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 8.0, 16.0),
+                          child: FFButtonWidget(
+                            onPressed: () async {
+                              context.pushNamed('Login');
+                            },
+                            text: FFLocalizations.of(context).getText(
+                              '2moiew3o' /* Login - Sing Up */,
                             ),
-                            borderRadius: BorderRadius.circular(12.0),
+                            options: FFButtonOptions(
+                              width: 230.0,
+                              height: 52.0,
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                              elevation: 0.0,
+                              borderSide: BorderSide(
+                                color: FlutterFlowTheme.of(context).alternate,
+                                width: 2.0,
+                              ),
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
                           ),
                         ),
                       ),

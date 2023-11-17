@@ -92,7 +92,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Home',
           path: '/home',
-          builder: (context, params) => const HomeWidget(),
+          builder: (context, params) => HomeWidget(
+            recepieName: params.getParam('recepieName', ParamType.String),
+            recetainfo:
+                params.getParam<String>('recetainfo', ParamType.String, true),
+            inforeceta:
+                params.getParam<String>('inforeceta', ParamType.String, true),
+            titulo: params.getParam('titulo', ParamType.JSON),
+          ),
         ),
         FFRoute(
           name: 'Ingredientes',
@@ -102,12 +109,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Nutrientes',
           path: '/nutrientes',
-          builder: (context, params) => const NutrientesWidget(),
-        ),
-        FFRoute(
-          name: 'Login',
-          path: '/Login',
-          builder: (context, params) => const LoginWidget(),
+          builder: (context, params) => NutrientesWidget(
+            valores: params.getParam('valores', ParamType.JSON),
+          ),
         ),
         FFRoute(
           name: 'RecetaApi',
@@ -115,6 +119,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => RecetaApiWidget(
             inforeceta: params.getParam('inforeceta', ParamType.JSON),
           ),
+        ),
+        FFRoute(
+          name: 'Login',
+          path: '/login',
+          builder: (context, params) => const LoginWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

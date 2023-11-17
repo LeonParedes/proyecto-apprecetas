@@ -6,6 +6,6 @@ export '/ajustes/funciones/ingredientes/ingredientes_widget.dart'
     show IngredientesWidget;
 export '/ajustes/funciones/nutrientes/nutrientes_widget.dart'
     show NutrientesWidget;
-export '/login/login_widget.dart' show LoginWidget;
 export '/ajustes/funciones/receta_api/receta_api_widget.dart'
     show RecetaApiWidget;
+export '/login/login/login_widget.dart' show LoginWidget;

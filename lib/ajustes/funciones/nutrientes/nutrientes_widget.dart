@@ -10,7 +10,12 @@ import 'nutrientes_model.dart';
 export 'nutrientes_model.dart';
 
 class NutrientesWidget extends StatefulWidget {
-  const NutrientesWidget({super.key});
+  const NutrientesWidget({
+    super.key,
+    required this.valores,
+  });
+
+  final dynamic valores;
 
   @override
   _NutrientesWidgetState createState() => _NutrientesWidgetState();
@@ -57,7 +62,7 @@ class _NutrientesWidgetState extends State<NutrientesWidget> {
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: const Color(0xFFB4F9EA),
+          backgroundColor: FlutterFlowTheme.of(context).secondary,
           automaticallyImplyLeading: false,
           leading: Align(
             alignment: const AlignmentDirectional(0.00, 0.00),
@@ -65,12 +70,12 @@ class _NutrientesWidgetState extends State<NutrientesWidget> {
               padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
-                borderRadius: 30.0,
-                buttonSize: MediaQuery.sizeOf(context).width * 0.1,
+                borderRadius: 40.0,
+                buttonSize: MediaQuery.sizeOf(context).width * 0.812,
                 icon: Icon(
                   Icons.arrow_back_outlined,
                   color: FlutterFlowTheme.of(context).primaryText,
-                  size: 20.0,
+                  size: 40.0,
                 ),
                 onPressed: () async {
                   context.safePop();
@@ -84,7 +89,7 @@ class _NutrientesWidgetState extends State<NutrientesWidget> {
               padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
               child: AutoSizeText(
                 FFLocalizations.of(context).getText(
-                  'frujlu8v' /* ReceBuddy */,
+                  'x5w5b86p' /* ReceBuddy */,
                 ),
                 style: FlutterFlowTheme.of(context).headlineLarge,
                 minFontSize: 16.0,
@@ -100,7 +105,7 @@ class _NutrientesWidgetState extends State<NutrientesWidget> {
                   borderColor: Colors.transparent,
                   borderRadius: 50.0,
                   borderWidth: 1.0,
-                  buttonSize: MediaQuery.sizeOf(context).width * 0.1,
+                  buttonSize: 50.0,
                   fillColor: const Color(0xFFC4C4C4),
                   icon: Icon(
                     Icons.other_houses_rounded,
@@ -166,9 +171,10 @@ class _NutrientesWidgetState extends State<NutrientesWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        '74l8x7tn' /* Takoyaki Japones */,
-                                      ),
+                                      getJsonField(
+                                        widget.valores,
+                                        r'''$.results[:].name''',
+                                      ).toString(),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyLarge
                                           .override(
@@ -230,15 +236,11 @@ class _NutrientesWidgetState extends State<NutrientesWidget> {
                                           ),
                                     ),
                                     TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        'y0csy0e3' /* 
-Porcentaje necesario diario: */
-                                        ,
-                                      ),
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w200,
-                                        fontSize: 12.0,
-                                      ),
+                                      text: getJsonField(
+                                        widget.valores,
+                                        r'''$.results[:].nutrition.carbohydrates''',
+                                      ).toString(),
+                                      style: const TextStyle(),
                                     )
                                   ],
                                   style:
@@ -278,63 +280,11 @@ Porcentaje necesario diario: */
                                           ),
                                     ),
                                     TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        'eembcrr1' /* 
-Porcentaje necesario diario: */
-                                        ,
-                                      ),
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w200,
-                                        fontSize: 12.0,
-                                      ),
-                                    )
-                                  ],
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            elevation: 4.0,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 5.0, 10.0, 5.0),
-                              child: RichText(
-                                textScaleFactor:
-                                    MediaQuery.of(context).textScaleFactor,
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        'tgq973zz' /* Grasas Saturadas: */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Open Sans',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                    TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        '5clc4296' /* 
-Porcentaje necesario diario: */
-                                        ,
-                                      ),
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w200,
-                                        fontSize: 12.0,
-                                      ),
+                                      text: getJsonField(
+                                        widget.valores,
+                                        r'''$.results[:].nutrition.fat''',
+                                      ).toString(),
+                                      style: const TextStyle(),
                                     )
                                   ],
                                   style:
@@ -374,111 +324,11 @@ Porcentaje necesario diario: */
                                           ),
                                     ),
                                     TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        'h4ut94ce' /* 
-Porcentaje necesario diario: */
-                                        ,
-                                      ),
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w200,
-                                        fontSize: 12.0,
-                                      ),
-                                    )
-                                  ],
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            elevation: 4.0,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 5.0, 10.0, 5.0),
-                              child: RichText(
-                                textScaleFactor:
-                                    MediaQuery.of(context).textScaleFactor,
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        'nhpjgefk' /* Colesterol: */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Open Sans',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                    TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        '4lmb9x6h' /* 
-Porcentaje necesario diario: */
-                                        ,
-                                      ),
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w200,
-                                        fontSize: 12.0,
-                                      ),
-                                    )
-                                  ],
-                                  style:
-                                      FlutterFlowTheme.of(context).bodyMedium,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Card(
-                            clipBehavior: Clip.antiAliasWithSaveLayer,
-                            color: FlutterFlowTheme.of(context)
-                                .secondaryBackground,
-                            elevation: 4.0,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 5.0, 10.0, 5.0),
-                              child: RichText(
-                                textScaleFactor:
-                                    MediaQuery.of(context).textScaleFactor,
-                                text: TextSpan(
-                                  children: [
-                                    TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        'bdks7533' /* Sodio: */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Open Sans',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primary,
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                    TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        'iat9wz7n' /* 
-Porcentaje necesario diario: */
-                                        ,
-                                      ),
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w200,
-                                        fontSize: 12.0,
-                                      ),
+                                      text: getJsonField(
+                                        widget.valores,
+                                        r'''$.results[:].nutrition.carbohydrates''',
+                                      ).toString(),
+                                      style: const TextStyle(),
                                     )
                                   ],
                                   style:
@@ -518,15 +368,11 @@ Porcentaje necesario diario: */
                                           ),
                                     ),
                                     TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        'wwfl0mor' /* 
-Porcentaje necesario diario: */
-                                        ,
-                                      ),
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w200,
-                                        fontSize: 12.0,
-                                      ),
+                                      text: getJsonField(
+                                        widget.valores,
+                                        r'''$.results[:].nutrition.sugar''',
+                                      ).toString(),
+                                      style: const TextStyle(),
                                     )
                                   ],
                                   style:
@@ -566,15 +412,11 @@ Porcentaje necesario diario: */
                                           ),
                                     ),
                                     TextSpan(
-                                      text: FFLocalizations.of(context).getText(
-                                        'tn0hmfdd' /* 
-Porcentaje necesario diario: */
-                                        ,
-                                      ),
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.w200,
-                                        fontSize: 12.0,
-                                      ),
+                                      text: getJsonField(
+                                        widget.valores,
+                                        r'''$.results[:].nutrition.protein''',
+                                      ).toString(),
+                                      style: const TextStyle(),
                                     )
                                   ],
                                   style:
@@ -610,7 +452,9 @@ Porcentaje necesario diario: */
                                       alignment:
                                           const AlignmentDirectional(0.00, 0.00),
                                       child: FFButtonWidget(
-                                        onPressed: () async {},
+                                        onPressed: () {
+                                          print('Button pressed ...');
+                                        },
                                         text:
                                             FFLocalizations.of(context).getText(
                                           'lz8iduae' /* Receta */,
